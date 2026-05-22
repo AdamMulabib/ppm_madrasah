@@ -22,11 +22,10 @@ export default function Home() {
         alt=""
         className="
           absolute
-          right-20
           left-[75%]
           top-30
           z-10
-          w-[450px]
+          w-[420px]
           rotate-[-1deg]
           object-contain
           pointer-events-none
@@ -37,12 +36,11 @@ export default function Home() {
         src={YellowShape}
         alt=""
         className="
-          absolute
-          right-50
-          left-[62%]
+          absolute     
+          right-80
           bottom-80
           z-10
-          w-[250px]
+          w-60
           rotate-[-5deg]
           object-contain
           pointer-events-none
@@ -54,11 +52,10 @@ export default function Home() {
         alt=""
         className="
           absolute
-          right-40
-          left-[75%]
+          left-[76%]
           bottom-10
           z-10
-          w-[350px]
+          w-[420px]
           rotate-[40deg]
           object-contain
           pointer-events-none
