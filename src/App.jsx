@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
 import CardSections from "./pages/CardSections";
@@ -24,13 +25,17 @@ function HomePage() {
 export default function App() {
   return (
     <BrowserRouter>
-      <Header />
+      <div className="overflow-x-clip">
+        <Header />
 
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/galeri" element={<Galeri />} />
-        <Route path="/tentang" element={<Tentang />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/galeri" element={<Galeri />} />
+          <Route path="/tentang" element={<Tentang />} />
+        </Routes>
+
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 }
