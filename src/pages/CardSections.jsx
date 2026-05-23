@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Zigzag from "../assets/shapes/zigzag.svg";
 import GreenShape from "../assets/shapes/green.svg";
 import YellowShape from "../assets/shapes/yellow.svg";
-import PurpleShape from "../assets/shapes/purple.svg";
+import RedShape from "../assets/shapes/red_ke_kanan.svg";
 
   export default function CardsSections() {
     const cards = [
@@ -47,17 +47,16 @@ import PurpleShape from "../assets/shapes/purple.svg";
         "
       />
 
-      {/* PURPLE */}
-        <motion.img
-          src={PurpleShape}
-          alt=""
-          initial={{ x: -180, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.3 }}
-          className="
+      <motion.img
+        src={RedShape}
+        alt=""
+        initial={{ x: -120, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: false, amount: 0 }}
+        className="
           absolute
-          left-[-170px] sm:left-[-120px] md:left-[-80px]
+          left-[-70px] sm:left-[-120px] md:left-[-80px]
           bottom-[-110px] sm:bottom-[-100px] md:bottom-[-90px]
           z-10
           w-[300px] sm:w-[380px] md:w-[460px]
@@ -68,17 +67,17 @@ import PurpleShape from "../assets/shapes/purple.svg";
       />
 
       {/* GREEN */}
-        <motion.img
-          src={GreenShape}
-          alt=""
-          initial={{ x: 220, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.9, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.3 }}
-          className="
+      <motion.img
+        src={GreenShape}
+        alt=""
+        initial={{ x: 140, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.9, ease: "easeOut" }}
+        viewport={{ once: false, amount: 0 }}
+        className="
           absolute
-          right-[-170px] sm:right-[-110px] md:right-[-60px]
-          bottom-[-130px] sm:bottom-[-125px] md:bottom-[-120px]
+          right-[-70px] sm:right-[-110px] md:right-[-60px]
+          bottom-[120px] sm:bottom-[40px] md:bottom-[-120px]
           z-10
           w-[320px] sm:w-[410px] md:w-[490px]
           object-contain

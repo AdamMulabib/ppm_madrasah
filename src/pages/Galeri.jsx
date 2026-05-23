@@ -79,11 +79,16 @@ export default function Galeri() {
             <motion.img
               src={PurpleShape}
               alt=""
-              initial={{ x: 180, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
-              viewport={{ once: false, amount: 0.2 }}
-              className="row-span-2 h-full w-full rounded-lg object-cover"
+              initial={{ x: 120, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.9, delay: 0.8, ease: "easeOut" }}
+              className="
+                row-span-2
+                h-full
+                w-full
+                rounded-lg
+                object-cover
+              "
             />
 
             {/* CARD 7 */}

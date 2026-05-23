@@ -78,13 +78,12 @@ export default function Tentang() {
       <motion.img
         src={YellowShape}
         alt=""
-        initial={{ x: 180, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
+        initial={{ x: 120, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.9, delay: 0.1, ease: "easeOut" }}
-        viewport={{ once: false, amount: 0.3 }}
         className="
           absolute
-          right-[70px] sm:right-[180px] md:right-[300px]
+          right-[40px] sm:right-[180px] md:right-[300px]
           top-[210px] sm:top-[220px] md:top-[250px]
           z-10
           w-[110px] sm:w-[140px] md:w-[180px]
@@ -98,14 +97,13 @@ export default function Tentang() {
       <motion.img
         src={GreenShape}
         alt=""
-        initial={{ x: 260, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
+        initial={{ x: 140, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 0.15, ease: "easeOut" }}
-        viewport={{ once: false, amount: 0.3 }}
         className="
           absolute
-          bottom-[-80px] sm:bottom-[-100px] md:bottom-[-120px]
-          right-[-120px] sm:right-[-100px] md:right-[-80px]
+          bottom-[80px] sm:bottom-[-40px] md:bottom-[-120px]
+          right-[-60px] sm:right-[-100px] md:right-[-80px]
           z-10
           w-[260px] sm:w-[340px] md:w-[420px]
           rotate-[-8deg]

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 import YellowShape from "../assets/shapes/yellow.svg";
-import RedShape from "../assets/shapes/red_ke_kanan.svg";
+import PurpleShape from "../assets/shapes/Purple.svg";
 
 export default function TentangPreview() {
   return (
@@ -10,16 +10,15 @@ export default function TentangPreview() {
       <motion.img
         src={YellowShape}
         alt=""
-        initial={{ x: 180, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
+        initial={{ x: 120, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        viewport={{ once: false, amount: 0.3 }}
         className="
           absolute
-          right-[-80px] sm:right-[-40px] md:right-[0px]
-          top-[180px]
+          right-[-20px] sm:right-[-40px] md:right-[0px]
+          top-[180px] sm:top-[190px] md:top-[180px]
           z-10
-          w-[170px] sm:w-[220px] md:w-[260px]
+          w-[140px] sm:w-[220px] md:w-[260px]
           rotate-[20deg]
           object-contain
           pointer-events-none
@@ -28,16 +27,15 @@ export default function TentangPreview() {
 
       {/* RED DECORATION */}
       <motion.img
-        src={RedShape}
+        src={PurpleShape}
         alt=""
-        initial={{ x: -180, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
+        initial={{ x: -120, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.9, delay: 0.1, ease: "easeOut" }}
-        viewport={{ once: false, amount: 0.3 }}
         className="
           absolute
-          left-[-120px] sm:left-[-90px] md:left-[-60px]
-          bottom-[-80px] sm:bottom-[-100px]
+          left-[-70px] sm:left-[-90px] md:left-[-60px]
+          bottom-[80px] sm:bottom-[-40px]
           z-10
           w-[220px] sm:w-[300px] md:w-[380px]
           rotate-[-8deg]

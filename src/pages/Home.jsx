@@ -16,15 +16,15 @@ export default function Home() {
     >
       {/* PURPLE CHARACTER */}
       <motion.img
-          src={PurpleShape}
-          alt=""
-          initial={{ x: 220, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.9, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.3 }}
-          className="
+        src={PurpleShape}
+        alt=""
+        initial={{ x: 120, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.9, ease: "easeOut" }}
+        viewport={{ once: false, amount: 0 }}
+        className="
           absolute
-          right-[-110px] sm:right-[-90px] md:right-[-70px] lg:right-[-40px] xl:right-[0px]
+          right-[-40px] sm:right-[-90px] md:right-[-70px] lg:right-[-40px] xl:right-[0px]
           top-[190px] sm:top-[160px] md:top-[130px] lg:top-[100px] xl:top-[90px]
           z-10
           w-[260px] sm:w-[320px] md:w-[400px] lg:w-[500px] xl:w-[560px]
@@ -58,21 +58,21 @@ export default function Home() {
         <motion.img
           src={RedShape}
           alt=""
-          initial={{ x: 260, opacity: 0 }}
+          initial={{ x: 140, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.1, delay: 0.25, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: false, amount: 0 }}
           className="
-          absolute
-          right-[-110px] sm:right-[-120px] md:right-[-130px] lg:right-[-120px] xl:right-[-80px]
-          bottom-[-35px] sm:bottom-[-45px] md:bottom-[-55px] lg:bottom-[-60px] xl:bottom-[-50px]
-          z-10
-          w-[240px] sm:w-[300px] md:w-[370px] lg:w-[460px] xl:w-[520px]
-          rotate-[40deg]
-          object-contain
-          pointer-events-none
-        "
-      />
+            absolute
+            right-[-40px] sm:right-[-120px] md:right-[-130px] lg:right-[-120px] xl:right-[-80px]
+            bottom-[-35px] sm:bottom-[-45px] md:bottom-[-55px] lg:bottom-[-60px] xl:bottom-[-50px]
+            z-10
+            w-[240px] sm:w-[300px] md:w-[370px] lg:w-[460px] xl:w-[520px]
+            rotate-[40deg]
+            object-contain
+            pointer-events-none
+          "
+        />
 
       
 
