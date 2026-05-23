@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 import YellowShape from "../assets/shapes/yellow.svg";
-import PurpleShape from "../assets/shapes/Purple.svg";
+import PurpleShape from "../assets/shapes/purple.svg";
 
 export default function TentangPreview() {
   return (
