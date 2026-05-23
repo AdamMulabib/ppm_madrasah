@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import RedShape from "../assets/shapes/red.svg";
 import YellowShape from "../assets/shapes/yellow.svg";
 import PurpleShape from "../assets/shapes/purple_home.svg";
@@ -14,10 +15,14 @@ export default function Home() {
       "
     >
       {/* PURPLE CHARACTER */}
-      <img
-        src={PurpleShape}
-        alt=""
-        className="
+      <motion.img
+          src={PurpleShape}
+          alt=""
+          initial={{ x: 220, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.3 }}
+          className="
           absolute
           right-[-110px] sm:right-[-90px] md:right-[-70px] lg:right-[-40px] xl:right-[0px]
           top-[190px] sm:top-[160px] md:top-[130px] lg:top-[100px] xl:top-[90px]
@@ -30,10 +35,14 @@ export default function Home() {
       />
 
       {/* YELLOW CHARACTER */}
-      <img
-        src={YellowShape}
-        alt=""
-        className="
+        <motion.img
+          src={YellowShape}
+          alt=""
+          initial={{ x: 180, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.15, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.3 }}
+          className="
           absolute
           right-[150px] sm:right-[220px] md:right-[320px] lg:right-[430px] xl:right-[520px]
           bottom-[80px] sm:bottom-[100px] md:bottom-[120px] lg:bottom-[140px] xl:bottom-[160px]
@@ -46,10 +55,14 @@ export default function Home() {
       />
 
       {/* RED CHARACTER */}
-      <img
-        src={RedShape}
-        alt=""
-        className="
+        <motion.img
+          src={RedShape}
+          alt=""
+          initial={{ x: 260, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1.1, delay: 0.25, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.3 }}
+          className="
           absolute
           right-[-110px] sm:right-[-120px] md:right-[-130px] lg:right-[-120px] xl:right-[-80px]
           bottom-[-35px] sm:bottom-[-45px] md:bottom-[-55px] lg:bottom-[-60px] xl:bottom-[-50px]

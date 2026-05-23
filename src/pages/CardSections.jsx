@@ -1,7 +1,8 @@
-  import Zigzag from "../assets/shapes/zigzag.svg";
-  import GreenShape from "../assets/shapes/green.svg";
-  import YellowShape from "../assets/shapes/yellow.svg";
-  import PurpleShape from "../assets/shapes/purple.svg";
+import { motion } from "framer-motion";
+import Zigzag from "../assets/shapes/zigzag.svg";
+import GreenShape from "../assets/shapes/green.svg";
+import YellowShape from "../assets/shapes/yellow.svg";
+import PurpleShape from "../assets/shapes/purple.svg";
 
   export default function CardsSections() {
     const cards = [
@@ -26,11 +27,15 @@
           pointer-events-none"
           />
 
-          {/* YELLOW */}
-      <img
-        src={YellowShape}
-        alt=""
-        className="
+        {/* YELLOW */}
+        <motion.img
+          src={YellowShape}
+          alt=""
+          initial={{ x: 180, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.3 }}
+          className="
           absolute
           right-[-85px] sm:right-[-40px] md:right-[-10px] lg:right-[0px]
           top-[170px] sm:top-[170px] md:top-[180px]
@@ -43,10 +48,14 @@
       />
 
       {/* PURPLE */}
-      <img
-        src={PurpleShape}
-        alt=""
-        className="
+        <motion.img
+          src={PurpleShape}
+          alt=""
+          initial={{ x: -180, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.3 }}
+          className="
           absolute
           left-[-170px] sm:left-[-120px] md:left-[-80px]
           bottom-[-110px] sm:bottom-[-100px] md:bottom-[-90px]
@@ -59,10 +68,14 @@
       />
 
       {/* GREEN */}
-      <img
-        src={GreenShape}
-        alt=""
-        className="
+        <motion.img
+          src={GreenShape}
+          alt=""
+          initial={{ x: 220, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.3 }}
+          className="
           absolute
           right-[-170px] sm:right-[-110px] md:right-[-60px]
           bottom-[-130px] sm:bottom-[-125px] md:bottom-[-120px]
@@ -76,19 +89,34 @@
         <div className="relative z-10 flex min-h-screen flex-col items-center justify-center on px-8 pt-28">
           <div className="grid gap-9 md:grid-cols-4">
             {cards.map((item, index) => (
-              <div
-                key={index}
-                className="w-[190px] overflow-hidden rounded-[15px] bg-[#7E8CE0]"
-              >
-                <div className="h-36 rounded-[19px] border-[9px] border-[#7E8CE0] bg-[#EDE5D8]">
-                  {/* nanti foto masuk di sini */}
-                </div>
+               <motion.div
+                  key={index}
+                  initial={{ y: 80, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{
+                    duration: 0.6,
+                    delay: index * 0.12,
+                    ease: "easeOut",
+                  }}
+                  viewport={{ once: false, amount: 0.2 }}
+                  className="
+                    w-[190px]
+                    overflow-hidden
+                    rounded-[15px]
+                    bg-[#7E8CE0]
+                    transition duration-300
+                    hover:-translate-y-2
+                  "
+                >
+                  <div className="h-36 rounded-[19px] border-[9px] border-[#7E8CE0] bg-[#EDE5D8]">
+                    {/* nanti foto masuk di sini */}
+                  </div>
 
-                <div className="px-4 pb-5 pt-2">
-                  <h3 className="text-xl font-black">{item.nama}</h3>
-                  <p className="mt-1 leading-tight">{item.deskripsi}</p>
-                </div>
-              </div>
+                  <div className="px-4 pb-5 pt-2">
+                    <h3 className="text-xl font-black">{item.nama}</h3>
+                    <p className="mt-1 leading-tight">{item.deskripsi}</p>
+                  </div>
+                </motion.div>
             ))}
           </div>
         </div>

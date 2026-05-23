@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import RedShape from "../assets/shapes/red.svg";
 import YellowShape from "../assets/shapes/yellow.svg";
 import GreenShape from "../assets/shapes/green.svg";
@@ -16,7 +18,13 @@ export default function Tentang() {
       "
     >
       {/* CONTENT */}
-      <div className="relative z-20 max-w-3xl">
+      <motion.div
+        initial={{ x: -120, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: false, amount: 0.3 }}
+        className="relative z-20 max-w-3xl"
+      >
         <h2 className="text-4xl font-black sm:text-5xl md:text-6xl">
           Tentang Kami
         </h2>
@@ -26,10 +34,14 @@ export default function Tentang() {
           Doloremque illum molestias, rerum consequatur nemo
           laboriosam.
         </p>
-      </div>
+      </motion.div>
 
       {/* ALAMAT */}
-      <p
+      <motion.p
+        initial={{ y: 60, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
+        viewport={{ once: false, amount: 0.3 }}
         className="
           absolute
           bottom-8 sm:bottom-10
@@ -41,12 +53,16 @@ export default function Tentang() {
         "
       >
         Perumahan Griya Satria Dampyak blok.A 12 RT.01/RW 09 Tegal
-      </p>
+      </motion.p>
 
       {/* RED */}
-      <img
+      <motion.img
         src={RedShape}
         alt=""
+        initial={{ x: 220, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.9, ease: "easeOut" }}
+        viewport={{ once: false, amount: 0.3 }}
         className="
           absolute
           right-[-90px] sm:right-[-60px] md:right-[-40px]
@@ -59,9 +75,13 @@ export default function Tentang() {
       />
 
       {/* YELLOW */}
-      <img
+      <motion.img
         src={YellowShape}
         alt=""
+        initial={{ x: 180, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.9, delay: 0.1, ease: "easeOut" }}
+        viewport={{ once: false, amount: 0.3 }}
         className="
           absolute
           right-[70px] sm:right-[180px] md:right-[300px]
@@ -75,9 +95,13 @@ export default function Tentang() {
       />
 
       {/* GREEN */}
-      <img
+      <motion.img
         src={GreenShape}
         alt=""
+        initial={{ x: 260, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1, delay: 0.15, ease: "easeOut" }}
+        viewport={{ once: false, amount: 0.3 }}
         className="
           absolute
           bottom-[-80px] sm:bottom-[-100px] md:bottom-[-120px]

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -9,17 +9,56 @@ export default function Header() {
         </h1>
 
         <div className="flex items-center gap-3 text-xs font-bold sm:gap-6 sm:text-base md:gap-8 md:text-lg">
-          <Link to="/" className="text-[#E53935] transition duration-300 hover:-translate-y-1 hover:scale-110">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `
+              transition duration-300
+              hover:scale-110
+              ${
+                isActive
+                  ? "text-[#FFFDF8] [-webkit-text-stroke:2px_#E53935] drop-shadow-[0_0_8px_#ffffff] font-extrabold"
+                  : "text-[#E53935]"
+              }
+            `
+            }
+          >
             Home
-          </Link>
+          </NavLink>
 
-          <Link to="/galeri" className="text-[#F4C542] transition duration-300 hover:-translate-y-1 hover:scale-110">
+          <NavLink
+            to="/galeri"
+            className={({ isActive }) =>
+              `
+              transition duration-300
+              hover:scale-110
+              ${
+                isActive
+                  ? "text-[#FFFDF8] [-webkit-text-stroke:2px_#F4C542] drop-shadow-[0_0_8px_#ffffff] font-extrabold"
+                  : "text-[#F4C542]"
+              }
+            `
+            }
+          >
             Galeri
-          </Link>
+          </NavLink>
 
-          <Link to="/tentang" className="text-[#7E8CE0] transition duration-300 hover:-translate-y-1 hover:scale-110">
+          <NavLink
+            to="/tentang"
+            className={({ isActive }) =>
+              `
+              transition duration-300
+              hover:scale-110
+              ${
+                isActive
+                  ? "text-[#FFFDF8] [-webkit-text-stroke:2px_#7E8CE0] drop-shadow-[0_0_8px_#ffffff] font-extrabold"
+                  : "text-[#7E8CE0]"
+              }
+            `
+            }
+          >
             Tentang
-          </Link>
+          </NavLink>
         </div>
       </nav>
     </header>
